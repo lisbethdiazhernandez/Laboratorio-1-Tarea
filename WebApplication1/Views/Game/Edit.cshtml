@@ -1,0 +1,21 @@
+﻿@model WebApplication1.Models.GameModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>    EDIT </h2>
+
+<h4>EstudianteViewModel</h4>
+<hr />
+<input type=“text” name=“ID”>
+<input type=“text” name=“NAME”>
+<input type=“text” name=“PUNTUATION”>
+@Html.ActionLink("EditGame", "EditGame", "Game")|
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
